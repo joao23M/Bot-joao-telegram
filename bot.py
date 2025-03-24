@@ -7,7 +7,7 @@ TOKEN = "7394421070:AAErGwoahdNdkMA4McSWbG6VehgP4avmNDI"
 def start(update: Update, context: CallbackContext) -> None:
     user = update.message.from_user
     update.message.reply_text(
-        f"👋 Olá, {user.first_name}! Bem-vindo(a) à **JoaoStore**. 😊\n\n"
+        f"👋 **Olá, {user.first_name}! Bem-vindo(a) à JoaoStore.**\n\n"
         "Aqui você encontra os melhores serviços de streamings, contas premium e muito mais!\n\n"
         "📋 **Comandos disponíveis:**\n"
         "/start - Iniciar o bot\n"
@@ -26,14 +26,15 @@ def pix(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(
         "📲 **Recarregar Saldo via PIX**\n\n"
         "Envie o valor que deseja recarregar para esta chave PIX:\n\n"
-        "Chave PIX: 7e7691eb-c2f5-4b1d-9e7d-4f247fe1b9e1\n\n"
+        "Chave PIX: 62484d81-b9de-4b27-9fff-0c32f6e4c916\n\n"
         "Após o pagamento, envie o comprovante para @suporte_joaostore.\n\n"
         "⚠️ **Atenção:** O valor mínimo para recarga é R$10,00."
     )
 
 # Função para o comando /saldo
 def saldo(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text("💰 Seu saldo atual é: R$0,00")
+    user = update.message.from_user
+    update.message.reply_text(f"💰 **Seu saldo atual é: R$0,00**\n\nID: {user.id}")
 
 # Função para o comando /termos
 def termos(update: Update, context: CallbackContext) -> None:
@@ -60,7 +61,10 @@ def historico(update: Update, context: CallbackContext) -> None:
         "📚 **Histórico de Compras**\n\n"
         "Aqui estão suas compras recentes:\n\n"
         "1. Netflix Padrão - R$8,50\n"
-        "2. IPTV +30000 Conteúdos - R$18,00\n\n"
+        "2. IPTV +30000 Conteúdos - R$18,00\n"
+        "3. Spotify Premium - R$5,00\n"
+        "4. Disney+ - R$10,00\n"
+        "5. HBO Max - R$12,00\n\n"
         "Para mais detalhes, entre em contato com o suporte."
     )
 
