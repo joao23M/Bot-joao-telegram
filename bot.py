@@ -6,7 +6,7 @@ def start(update: Update, context: CallbackContext) -> None:
 
 def main() -> None:
     # Token do seu bot (substitua pelo token correto)
-    updater = Updater("7954905234:AAGibTxa20RT_rv2kl_fC4Yk9yq8kadgW4o")
+    updater = Updater("7394421070:AAErGwoahd-NdkMA4McSWbG6Vegh-P4avmNDI")
 
     dispatcher = updater.dispatcher
 
